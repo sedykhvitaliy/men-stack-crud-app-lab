@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= car.name %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="cars-details">
+    </div>
+    <h1><%= car.name %></h1>
+    <% if (car.isSportCar) { %>
+        <p>This is sport cars</p>
+    <% } else { %>
+        <p>This is not sport cars!</p>
+    <% } %>
+    <div class="cars-actions">
+    <form action="/cars/<%= car._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= car.name %></button>
+    </form>
+
+    <a href="/cars/<%= car._id %>/edit">Edit <%= car.name %></a>
+    <a href="/cars/">Back to car's list</a>
+</div>
+  </body>
+</html>

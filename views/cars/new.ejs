@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a car</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+
+<div class="checkbox-div">
+  <label for="is-a-sport-car">Is a sport car?</label>
+  <input type="checkbox" name="isSportCar" id="is-a-sport-car" />
+</div>
+
+    <h1>Add a new car!</h1>
+    <form action="/cars" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+    
+        <label for="is-a-sport-car">Is a sport car?</label>
+        <input type="checkbox" name="isSportCar" id="isSportCar" />
+    
+        <button type="submit">Add Car</button>
+      </form>
+<a href="/cars/">Back to Car's list.</a>
+  </body>
+</html>
